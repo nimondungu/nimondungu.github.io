@@ -1,100 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maureen Wairimu Ndungu | Data Analyst & Data Pipeline Engineer</title>
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #334155;
-            --heading: #0f172a;
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        header { background-color: var(--primary); color: white; padding: 3rem 1rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.2rem; }
-        header p { font-size: 1.1rem; color: #94a3b8; margin-top: 0.5rem; }
-        .links a { color: #60a5fa; margin: 0 10px; text-decoration: none; font-weight: bold; }
-        .section-title { border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; color: var(--heading); margin-top: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-        .card { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .card h3 { margin-top: 0; color: var(--heading); }
-        .badge { background: #e0e7ff; color: #3730a3; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 0.5rem; }
-        .btn { display: inline-block; background: var(--accent); color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; margin-right: 5px; }
-        .btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
-        footer { text-align: center; margin-top: 3rem; padding: 1rem; color: #64748b; font-size: 0.9rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maureen Wairimu Ndungu | Data Analyst & Pipeline Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Maureen Wairimu Ndungu</h1>
-        <p>Data Analyst | Data Pipeline Engineer | Business Analyst</p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/maureen-ndungu-3757591a4/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/nimondungu" target="_blank">GitHub</a> | 
-            <a href="mailto:maureenndungu51@gmail.com">Email</a>
-        </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Maureen W. Ndungu</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section (The Hook) -->
+  <section id="about" class="hero">
+    <h1>Turning Data Into Decisions</h1>
+    <p class="subtitle">Data Analyst | Sales Admin | Data Pipeline Engineer</p>
+    <p class="tagline">
+      Data is only powerful when it leads to action[cite: 1]. Holding a BSc in Statistics and experience across 
+      pharmaceutical, healthcare, insurance, and automotive sectors[cite: 1], I build automated reporting pipelines, 
+      SQL extractions, and executive Power BI dashboards that drive measurable business impact.
+    </p>
+    <div class="hero-actions">
+      <a href="Maureen_Ndungu_Resume.pdf" download class="btn-primary">Download CV</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
     </div>
-</header>
+  </section>
 
-<div class="container">
-
-    <h2 class="section-title">About Me</h2>
-    <p>Results-driven Data Analyst and Developer holding a BSc in Statistics and dual ALX certifications in Data Analytics & Data Science. Specialized in building data infrastructure from the ground up, end-to-end Python/Flask BI engines, automated ERP data pipelines, and executive dashboards across East African operations.</p>
-
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="grid">
-        
-        <!-- Project 1 -->
-        <div class="card">
-            <span class="badge">Python / Flask / Gemini AI</span>
-            <h3>AI-Powered BI & NL2SQL Engine</h3>
-            <p>Full-stack analytics web application converting natural language business prompts into executed SQL queries, strategic findings, and dynamic Word/PowerPoint exports.</p>
-            <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="btn">Live Demo</a>
-            <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="btn btn-outline">GitHub Code</a>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card">
-            <span class="badge">Python / Pandas / OpenPyXL</span>
-            <h3>Automated Tally ERP Data Pipeline</h3>
-            <p>Custom Python ETL pipeline that cleans raw interleaved Tally ERP sales exports, handles multi-currency conversions (KES to USD), and highlights multi-batch split invoices.</p>
-            <a href="https://github.com/nimondungu" target="_blank" class="btn btn-outline">GitHub Repository</a>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card">
-            <span class="badge">Excel / Power BI / SQL</span>
-            <h3>Regional Sales Intelligence Dashboard</h3>
-            <p>Pharmaceutical sales and expiry dashboard covering Kenya, Tanzania, and Uganda across 4 financial years with rolling average forecasting and automated daily VBA reports.</p>
-            <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="btn btn-outline">View Repository</a>
-        </div>
-
+  <!-- Work Experience Timeline -->
+  <section id="experience" class="content-section">
+    <h2>Professional Experience</h2>
+    
+    <div class="card">
+      <h3>Sales Admin & Data Analyst — Medscribe Ltd</h3>
+      <span class="date">March 2026 – Present | Nairobi</span>
+      <p>Built the regional data analytics function from scratch for a pharmaceutical distribution company operating across Kenya, Tanzania, and Uganda.</p>
+      <ul>
+        <li>Designed 8 interactive Excel dashboards with dynamic slicers tracking performance across 4 financial years.</li>
+        <li>Developed a comprehensive sales forecasting model featuring 3-month rolling averages and Target vs. Achievement breakdowns.</li>
+        <li>Automated running balance reports using VBA Macros, eliminating manual compilation bottlenecks.</li>
+      </ul>
     </div>
 
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Data Engineering & Web</h3>
-            <p>Python (Flask, Pandas), SQL, SQLite, REST APIs, HTML/CSS, Git, Tally ERP Data Extraction.</p>
-        </div>
-        <div class="card">
-            <h3>BI & Financial Analytics</h3>
-            <p>Advanced Excel (VBA Macros, Power Pivot, DAX), Power BI Dashboards, Revenue Reconciliation, Financial Modeling.</p>
-        </div>
+    <div class="card">
+      <h3>ICT Intern — MP Shah Hospital</h3>
+      <span class="date">September 2025 – March 2026 | Nairobi</span>
+      <p>Conducted Turnaround Time (TAT) surveys, extracted and cleaned SQL datasets, and built Power BI dashboards to support operational oversight[cite: 1].</p>
+      <ul>
+        <li>Provided first-line ICT support and system troubleshooting while maintaining strict incident tracking records[cite: 1].</li>
+        <li>Managed data entry, validation, and training for institutional projects to enforce high data accuracy standards[cite: 1].</li>
+      </ul>
     </div>
 
-</div>
+    <div class="card">
+      <h3>Business Analyst & Marketing Intern — Jubilee Insurance</h3>
+      <span class="date">June 2024 – December 2024 | Nairobi</span>
+      <p>Consolidated multi-departmental datasets to improve the speed and accuracy of Power BI analytical presentations[cite: 1].</p>
+      <ul>
+        <li>Generated digital footprint performance reports and contributed data tracking and content summaries for ESG/CSR initiatives[cite: 1].</li>
+      </ul>
+    </div>
 
-<footer>
-    <p>© 2026 Maureen Wairimu Ndungu • Hosted free on GitHub Pages</p>
-</footer>
+    <div class="card">
+      <h3>Data Analyst Intern — Tuffsteel Limited</h3>
+      <span class="date">September 2023 – February 2024 | Nairobi</span>
+      <p>Analyzed fuel consumption and fleet management software performance to execute gap analyses and minimize operational risks[cite: 1].</p>
+    </div>
+
+    <div class="card">
+      <h3>Business Analyst Intern — Simba Corporation</h3>
+      <span class="date">May 2023 – August 2023 | Nairobi</span>
+      <p>Cleaned and validated multi-departmental datasets using Dynamics 365 and designed real-time Power BI dashboards for executive reporting[cite: 1].</p>
+    </div>
+  </section>
+
+  <!-- Case Studies / Featured Projects -->
+  <section id="projects" class="content-section">
+    <h2>Featured Projects & Case Studies</h2>
+    
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Employee Data Collection Portal</h3>
+        <p class="case-study-label"><strong>Problem:</strong> Manual, error-prone data entries during onboarding.</p>
+        <p class="case-study-label"><strong>Solution:</strong> Built a responsive Python Flask web application connected to SQLite backend validation.</p>
+        <p class="case-study-label"><strong>Impact:</strong> Eliminated duplicate records prior to system ingestion and automated database tracking.</p>
+        <div class="tech-tags">
+          <span>Python</span> <span>Flask</span> <span>SQLite</span> <span>HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>East Africa Regional Sales Intelligence</h3>
+        <p class="case-study-label"><strong>Problem:</strong> Fragmented cross-border tracking across Kenya, Tanzania, and Uganda operations.</p>
+        <p class="case-study-label"><strong>Solution:</strong> Consolidated multi-market data sources into centralized automated models and dynamic Excel dashboards.</p>
+        <p class="case-study-label"><strong>Impact:</strong> Enabled real-time visibility into rolling forecasts, inventory stock levels, and expiry monitoring.</p>
+        <div class="tech-tags">
+          <span>Excel (VBA/DAX)</span> <span>Power BI</span> <span>SQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="content-section">
+    <h2>Technical Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h3>Data Analysis & BI</h3>
+        <p>Power BI, Advanced Excel (Power Pivot, DAX, VBA Macros), SQL, Python (Pandas, Flask), Data Modeling & Reconciliation.</p>
+      </div>
+      <div class="skill-box">
+        <h3>Systems & Infrastructure</h3>
+        <p>First-line ICT Support, Incident Tracking, Dynamics 365, SQLite, Linux (Ubuntu VirtualBox)[cite: 1].</p>
+      </div>
+      <div class="skill-box">
+        <h3>Business & Domain Impact</h3>
+        <p>Regulatory Reporting, Risk Awareness, Data Governance, Market Trend Analysis, ESG/CSR Reporting[cite: 1].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordion FAQ Section -->
+  <section id="faq" class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    <details class="faq-item">
+      <summary>What tools and tech stack do you primarily use?</summary>
+      <p>I leverage a blend of SQL, Advanced Excel (VBA/DAX), Power BI, and Python (Flask/SQLite) to extract, clean, and model data into production-ready insights.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Are you available for full-time roles or consulting?</summary>
+      <p>Yes, I am actively open to data analytics, sales administration, and monitoring & evaluation (M&E) opportunities across corporate and development sectors.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How quickly can custom data reports or pipelines be deployed?</summary>
+      <p>Turnaround times depend on data cleanliness and source scope, ranging from automated Excel macros built within days to comprehensive cross-border Power BI pipelines.</p>
+    </details>
+  </section>
+
+  <!-- Dedicated Footer & Contact Section -->
+  <footer id="contact" class="footer">
+    <h2>Let's Connect</h2>
+    <p>Interested in collaborating or discussing data pipelines? Reach out below!</p>
+    
+    <div class="contact-info">
+      <p>📍 Nairobi, Kenya</p>
+      <p>📧 Email: <a href="mailto:maureenndungu51@gmail.com">maureenndungu51@gmail.com</a></p>
+      <p>📞 Phone: +254 725 135 530</p>
+    </div>
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/maureen-ndungu-3757591a4" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/nimondungu" target="_blank">GitHub</a>
+    </div>
+    
+    <p class="copyright">© 2026 Maureen Wairimu Ndungu. Built with clean code & hosted on GitHub Pages.</p>
+  </footer>
 
 </body>
 </html>
