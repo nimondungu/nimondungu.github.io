@@ -27,7 +27,6 @@
 
     /* Hero Section */
     .hero { text-align: center; padding: 5rem 1.5rem 3rem; max-width: 900px; margin: 0 auto; }
-    .hero-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 1rem; }
     .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
     .hero .subtitle { font-size: 1.25rem; color: var(--accent); font-weight: 600; margin-bottom: 1.2rem; }
     .hero .tagline { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.8; }
@@ -44,31 +43,34 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
     .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 2rem; text-align: center; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
 
-    /* Featured Projects Grid (Portfolio Cards Style) */
+    /* Featured Projects Grid */
     .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-    .project-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; }
-    .project-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+    
+    /* Clickable Card Link Wrapper */
+    .card-link-wrapper { text-decoration: none; color: inherit; display: block; }
+
+    .project-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; height: 100%; cursor: pointer; }
+    .card-link-wrapper:hover .project-card { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
     
     .project-banner { height: 160px; background: linear-gradient(135deg, #1e293b, #0f172a); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-weight: 800; font-size: 1.2rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
     .project-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
     .project-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-main); }
     .project-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.2rem; flex-grow: 1; }
     
-    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
     .tech-tag { background: #0f172a; color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); }
     
-    .card-links { display: flex; gap: 1rem; }
-    .card-links a { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.85rem; }
-    .card-links a:hover { text-decoration: underline; }
+    .repo-callout { color: var(--accent); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; margin-top: auto; }
+    .card-link-wrapper:hover .repo-callout { text-decoration: underline; color: #7dd3fc; }
 
-    /* Tab Layout Page Views (Portfolio vs Resume) */
+    /* Page View Display */
     .page-view { display: block; }
     .page-view.hidden { display: none; }
 
-    /* Embedded PDF Resume Viewer Section */
+    /* Resume Viewer Section */
     .resume-viewer { width: 100%; height: 800px; border: 1px solid var(--border); border-radius: 8px; margin-top: 1.5rem; background: var(--card-bg); }
 
-    /* Experience & Skills Layout */
+    /* Experience Item */
     .experience-item { background: var(--card-bg); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.2rem; }
     .experience-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
     .experience-header h3 { color: var(--accent); font-size: 1.15rem; }
@@ -95,7 +97,7 @@
 
   <main id="portfolio-view" class="page-view">
     <section id="about" class="hero">
-      <h1>Maureen Wairimu Ndungu</h1>
+      <h1>Maureen W. Ndungu</h1>
       <p class="subtitle">Data Analyst | Data Pipeline Engineer | Business Analyst</p>
       <p class="tagline">
         BSc in Statistics | Dual ALX Certified in Data Analytics & Data Science.<br>
@@ -111,56 +113,56 @@
       <h2 class="section-title">Featured Projects</h2>
       <div class="project-grid">
         
-        <div class="project-card">
-          <div class="project-banner">NL2SQL Engine</div>
-          <div class="project-content">
-            <h3>AI-Powered BI & NL2SQL Engine</h3>
-            <p>Full-stack analytics engine converting natural language business queries directly into executed SQL pipelines, actionable summaries, and slide exports.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Flask</span>
-              <span class="tech-tag">Gemini AI</span>
-              <span class="tech-tag">SQLite</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank">GitHub Repository →</a>
+        <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="card-link-wrapper">
+          <div class="project-card">
+            <div class="project-banner">NL2SQL Engine</div>
+            <div class="project-content">
+              <h3>AI-Powered BI & NL2SQL Engine</h3>
+              <p>Full-stack analytics engine converting natural language business queries directly into executed SQL pipelines, actionable summaries, and slide exports.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Gemini AI</span>
+                <span class="tech-tag">SQLite</span>
+              </div>
+              <div class="repo-callout">View GitHub Repository →</div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
-          <div class="project-banner">Tally ERP ETL</div>
-          <div class="project-content">
-            <h3>Automated Tally ERP Pipeline</h3>
-            <p>Custom Python ETL data pipeline built to parse interleaved Tally ERP sales exports, conduct multi-currency conversions, and flag batch split invoices.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">OpenPyXL</span>
-              <span class="tech-tag">ETL</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/nimondungu" target="_blank">GitHub Repository →</a>
+        <a href="https://github.com/nimondungu" target="_blank" class="card-link-wrapper">
+          <div class="project-card">
+            <div class="project-banner">Tally ERP ETL</div>
+            <div class="project-content">
+              <h3>Automated Tally ERP Pipeline</h3>
+              <p>Custom Python ETL data pipeline built to parse interleaved Tally ERP sales exports, conduct multi-currency conversions, and flag batch split invoices.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">OpenPyXL</span>
+                <span class="tech-tag">ETL</span>
+              </div>
+              <div class="repo-callout">View GitHub Repository →</div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
-          <div class="project-banner">Pharma Intelligence</div>
-          <div class="project-content">
-            <h3>Regional Sales & Expiry Dashboard</h3>
-            <p>Interactive regional dashboard covering East Africa (Kenya, Tanzania, Uganda) to monitor target achievements, batch expiries, and rolling inventory trends.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Excel VBA</span>
-              <span class="tech-tag">Power BI</span>
-              <span class="tech-tag">DAX</span>
-              <span class="tech-tag">SQL</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank">GitHub Repository →</a>
+        <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="card-link-wrapper">
+          <div class="project-card">
+            <div class="project-banner">Pharma Intelligence</div>
+            <div class="project-content">
+              <h3>Regional Sales & Expiry Dashboard</h3>
+              <p>Interactive regional dashboard covering East Africa (Kenya, Tanzania, Uganda) to monitor target achievements, batch expiries, and rolling inventory trends.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Excel VBA</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+              <div class="repo-callout">View GitHub Repository →</div>
             </div>
           </div>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -209,7 +211,6 @@
   </footer>
 
   <script>
-    // Tab switching between Portfolio section and Dedicated Resume viewer
     function switchTab(tabName) {
       const portfolioView = document.getElementById('portfolio-view');
       const resumeView = document.getElementById('resume-view');
