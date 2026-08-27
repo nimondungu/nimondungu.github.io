@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maureen Wairimu Ndungu | Data Analyst & Data Pipeline Engineer</title>
+  <title>Maureen Wairimu Ndungu | Data Analyst & Pipeline Engineer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,9 +23,10 @@
   <section id="about" class="hero">
     <span class="badge">Data & Decision Intelligence</span>
     <h1>Turning Complex Data Into Strategic Decisions</h1>
-    <p class="subtitle">Data Analyst | Data Pipeline Engineer | Business Analyst</p>
+    <p class="subtitle">Data Analyst | Sales Admin | Data Pipeline Engineer</p>
     <p class="tagline">
-      Results-driven Data Analyst and Developer holding a BSc in Statistics and dual ALX certifications in Data Analytics & Data Science. Specialized in building data infrastructure from the ground up, end-to-end Python/Flask BI engines, automated ERP data pipelines, and executive dashboards across East African operations.
+      BSc in Statistics. I engineer automated reporting pipelines, execute complex SQL extractions, 
+      and design executive Power BI & Excel dashboards that drive measurable business growth across East Africa.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">Explore Featured Projects</a>
@@ -55,74 +56,50 @@
 
     <div class="filter-group">
       <button class="filter-btn active" data-filter="all">All Stack</button>
-      <button class="filter-btn" data-filter="python">Python & Flask / AI</button>
-      <button class="filter-btn" data-filter="etl">ETL & Data Pipelines</button>
+      <button class="filter-btn" data-filter="python">Python & Flask</button>
       <button class="filter-btn" data-filter="bi">Power BI & Excel</button>
     </div>
 
     <div class="project-grid">
       <div class="project-card" data-category="python">
-        <span class="card-tag">Python / Flask / Gemini AI</span>
-        <h3>AI-Powered BI & NL2SQL Engine</h3>
-        <p class="summary">Full-stack analytics web application converting natural language business prompts into executed SQL queries, strategic findings, and dynamic exports.</p>
+        <span class="card-tag">Python / Flask</span>
+        <h3>Employee Data Collection Portal</h3>
+        <p class="summary">Built a responsive web application with backend validation to optimize onboarding workflows.</p>
         <div class="tech-tags">
-          <span>Python</span> <span>Flask</span> <span>Gemini AI</span> <span>SQL</span>
+          <span>Python</span> <span>Flask</span> <span>SQLite</span> <span>HTML/CSS</span>
         </div>
-        <button class="btn-outline" onclick="openModal('modal-ai')">View Case Study</button>
-        <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="btn-link">GitHub Code</a>
-      </div>
-
-      <div class="project-card" data-category="etl">
-        <span class="card-tag">Python / Pandas / OpenPyXL</span>
-        <h3>Automated Tally ERP Data Pipeline</h3>
-        <p class="summary">Custom Python ETL pipeline that cleans raw interleaved Tally ERP sales exports and handles multi-currency conversions.</p>
-        <div class="tech-tags">
-          <span>Python</span> <span>Pandas</span> <span>OpenPyXL</span> <span>ETL</span>
-        </div>
-        <button class="btn-outline" onclick="openModal('modal-tally')">View Case Study</button>
-        <a href="https://github.com/nimondungu" target="_blank" class="btn-link">GitHub Code</a>
+        <button class="btn-outline" onclick="openModal('modal-portal')">View Case Study</button>
       </div>
 
       <div class="project-card" data-category="bi">
-        <span class="card-tag">Excel / Power BI / SQL</span>
-        <h3>Regional Sales Intelligence Dashboard</h3>
-        <p class="summary">Pharmaceutical sales and expiry dashboard covering Kenya, Tanzania, and Uganda with rolling average forecasting and automated VBA reports.</p>
+        <span class="card-tag">Power BI / Excel</span>
+        <h3>East Africa Regional Sales Intelligence</h3>
+        <p class="summary">Consolidated cross-border operations across Kenya, Tanzania, and Uganda into automated dynamic dashboards.</p>
         <div class="tech-tags">
           <span>Excel (VBA/DAX)</span> <span>Power BI</span> <span>SQL</span>
         </div>
         <button class="btn-outline" onclick="openModal('modal-sales')">View Case Study</button>
-        <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="btn-link">GitHub Code</a>
       </div>
     </div>
   </section>
 
-  <div id="modal-ai" class="modal">
+  <div id="modal-portal" class="modal">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('modal-ai')">&times;</span>
-      <h3>AI-Powered BI & NL2SQL Engine</h3>
-      <p><strong>Overview:</strong> Full-stack analytics web application converting natural language business prompts into executed SQL queries, strategic findings, and dynamic Word/PowerPoint exports.</p>
-      <p><strong>Stack:</strong> Python, Flask, Gemini AI API, SQLite, HTML/CSS.</p>
-      <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="modal-link">View Live Repository</a>
-    </div>
-  </div>
-
-  <div id="modal-tally" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('modal-tally')">&times;</span>
-      <h3>Automated Tally ERP Data Pipeline</h3>
-      <p><strong>Overview:</strong> Custom Python ETL pipeline that cleans raw interleaved Tally ERP sales exports, handles multi-currency conversions (KES to USD), and highlights multi-batch split invoices.</p>
-      <p><strong>Stack:</strong> Python, Pandas, OpenPyXL, Data Cleaning & Reconciliation.</p>
-      <a href="https://github.com/nimondungu" target="_blank" class="modal-link">View Live Repository</a>
+      <span class="close-btn" onclick="closeModal('modal-portal')">&times;</span>
+      <h3>Employee Data Collection Portal</h3>
+      <p><strong>Problem:</strong> High error rates and duplicate entries during manual employee onboarding CSV processing.</p>
+      <p><strong>Solution:</strong> Engineed a lightweight Python Flask web app backed by SQLite and client/server validation rules.</p>
+      <p><strong>Impact:</strong> Completely eliminated duplicate records prior to database ingestion and automated record tracking.</p>
     </div>
   </div>
 
   <div id="modal-sales" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal('modal-sales')">&times;</span>
-      <h3>Regional Sales Intelligence Dashboard</h3>
-      <p><strong>Overview:</strong> Pharmaceutical sales and expiry dashboard covering Kenya, Tanzania, and Uganda across 4 financial years with rolling average forecasting and automated daily VBA reports.</p>
-      <p><strong>Stack:</strong> Excel (Power Pivot, DAX, VBA), Power BI, SQL.</p>
-      <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="modal-link">View Live Repository</a>
+      <h3>East Africa Regional Sales Intelligence</h3>
+      <p><strong>Problem:</strong> Fragmented cross-border reporting across operations in Kenya, Tanzania, and Uganda.</p>
+      <p><strong>Solution:</strong> Unified multi-market financial data sources using automated DAX data models and VBA macros.</p>
+      <p><strong>Impact:</strong> Delivered real-time executive visibility into rolling forecasts, stock allocations, and expiry risks.</p>
     </div>
   </div>
 
@@ -195,12 +172,12 @@
     <h2>Technical Expertise</h2>
     <div class="skills-grid">
       <div class="skill-box">
-        <h3>Data Engineering & Web</h3>
-        <p>Python (Flask, Pandas), SQL, SQLite, REST APIs, HTML/CSS, Git, Tally ERP Data Extraction.</p>
+        <h3>Data Analysis & BI</h3>
+        <p>Power BI, Advanced Excel (Power Pivot, DAX, VBA), SQL, Python (Pandas, Flask), Data Reconciliation.</p>
       </div>
       <div class="skill-box">
-        <h3>BI & Financial Analytics</h3>
-        <p>Advanced Excel (VBA Macros, Power Pivot, DAX), Power BI Dashboards, Revenue Reconciliation, Financial Modeling.</p>
+        <h3>Systems & Infrastructure</h3>
+        <p>Dynamics 365, SQLite, Linux (Ubuntu VirtualBox), ICT Systems Support, Incident Management.</p>
       </div>
       <div class="skill-box">
         <h3>Domain & Governance</h3>
@@ -238,7 +215,7 @@
       <a href="https://github.com/nimondungu" target="_blank">GitHub</a>
     </div>
     
-    <p class="copyright">© 2026 Maureen Wairimu Ndungu. Hosted free on GitHub Pages.</p>
+    <p class="copyright">© 2026 Maureen Wairimu Ndungu. Built with clean code & hosted on GitHub Pages.</p>
   </footer>
 
   <script>
