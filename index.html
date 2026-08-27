@@ -60,10 +60,9 @@
 
     /* Grid & Cards */
     .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-    .card-link-wrapper { text-decoration: none; color: inherit; display: block; }
 
     .project-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; height: 100%; }
-    .card-link-wrapper:hover .project-card { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+    .project-card:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
     
     .project-banner { height: 160px; background: linear-gradient(135deg, var(--card-bg), var(--bg)); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-weight: 800; font-size: 1.2rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
     .project-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
@@ -72,9 +71,6 @@
     
     .tech-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
     .tech-tag { background: var(--bg); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); }
-    
-    .repo-callout { color: var(--accent); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; margin-top: auto; }
-    .card-link-wrapper:hover .repo-callout { text-decoration: underline; }
 
     /* Experience Items */
     .experience-item { background: var(--card-bg); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.2rem; }
@@ -90,6 +86,7 @@
 </head>
 <body>
 
+  <!-- Top Navigation -->
   <header class="navbar">
     <div class="logo">Maureen W. Ndungu</div>
     <div class="nav-right">
@@ -110,6 +107,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="about" class="hero">
       <h1>Maureen W. Ndungu</h1>
       <p class="subtitle">Data Analyst | Data Pipeline Engineer | Business Analyst</p>
@@ -123,61 +121,67 @@
       </div>
     </section>
 
+    <!-- Projects Grid -->
     <div class="container" id="projects">
       <h2 class="section-title">Featured Projects</h2>
       <div class="project-grid">
         
-        <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="card-link-wrapper">
-          <div class="project-card">
-            <div class="project-banner">NL2SQL Engine</div>
-            <div class="project-content">
-              <h3>AI-Powered BI & NL2SQL Engine</h3>
-              <p>Full-stack analytics engine converting natural language business queries directly into executed SQL pipelines, actionable summaries, and slide exports.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Flask</span>
-                <span class="tech-tag">Gemini AI</span>
-                <span class="tech-tag">SQLite</span>
-              </div>
-              <div class="repo-callout">View GitHub Repository →</div>
+        <!-- Project 1: NL2SQL Engine with Live Render Link -->
+        <div class="project-card">
+          <div class="project-banner">NL2SQL Engine</div>
+          <div class="project-content">
+            <h3>AI-Powered BI & NL2SQL Engine</h3>
+            <p>Full-stack analytics engine converting natural language business queries directly into executed SQL pipelines, actionable summaries, and slide exports.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Gemini AI</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+            <div style="display: flex; gap: 0.8rem; margin-top: auto; padding-top: 0.5rem;">
+              <a href="https://flask-data-entry-app.onrender.com/" target="_blank" class="btn-primary" style="padding: 8px 14px; font-size: 0.8rem;">Try Live Demo 🚀</a>
+              <a href="https://github.com/nimondungu/flask-data-entry-app" target="_blank" class="btn-secondary" style="padding: 8px 14px; font-size: 0.8rem;">GitHub Repo</a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="https://github.com/nimondungu" target="_blank" class="card-link-wrapper">
-          <div class="project-card">
-            <div class="project-banner">Tally ERP ETL</div>
-            <div class="project-content">
-              <h3>Automated Tally ERP Pipeline</h3>
-              <p>Custom Python ETL data pipeline built to parse interleaved Tally ERP sales exports, conduct multi-currency conversions, and flag batch split invoices.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">OpenPyXL</span>
-                <span class="tech-tag">ETL</span>
-              </div>
-              <div class="repo-callout">View GitHub Repository →</div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-banner">Tally ERP ETL</div>
+          <div class="project-content">
+            <h3>Automated Tally ERP Pipeline</h3>
+            <p>Custom Python ETL data pipeline built to parse interleaved Tally ERP sales exports, conduct multi-currency conversions, and flag batch split invoices.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">OpenPyXL</span>
+              <span class="tech-tag">ETL</span>
+            </div>
+            <div style="display: flex; gap: 0.8rem; margin-top: auto; padding-top: 0.5rem;">
+              <a href="https://github.com/nimondungu" target="_blank" class="btn-secondary" style="padding: 8px 14px; font-size: 0.8rem; width: 100%;">View GitHub Repo →</a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="card-link-wrapper">
-          <div class="project-card">
-            <div class="project-banner">Pharma Intelligence</div>
-            <div class="project-content">
-              <h3>Regional Sales & Expiry Dashboard</h3>
-              <p>Interactive regional dashboard covering East Africa (Kenya, Tanzania, Uganda) to monitor target achievements, batch expiries, and rolling inventory trends.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Excel VBA</span>
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">DAX</span>
-                <span class="tech-tag">SQL</span>
-              </div>
-              <div class="repo-callout">View GitHub Repository →</div>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-banner">Pharma Intelligence</div>
+          <div class="project-content">
+            <h3>Regional Sales & Expiry Dashboard</h3>
+            <p>Interactive regional dashboard covering East Africa (Kenya, Tanzania, Uganda) to monitor target achievements, batch expiries, and rolling inventory trends.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Excel VBA</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div style="display: flex; gap: 0.8rem; margin-top: auto; padding-top: 0.5rem;">
+              <a href="https://github.com/nimondungu/pharma-dashboard" target="_blank" class="btn-secondary" style="padding: 8px 14px; font-size: 0.8rem; width: 100%;">View GitHub Repo →</a>
             </div>
           </div>
-        </a>
+        </div>
 
+        <!-- Project 4: Presentation Deck -->
         <div class="project-card">
           <div class="project-banner">Executive Presentation</div>
           <div class="project-content">
@@ -198,6 +202,7 @@
       </div>
     </div>
 
+    <!-- Work Experience -->
     <div class="container" id="experience">
       <h2 class="section-title">Work Experience</h2>
       
@@ -221,6 +226,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer id="contact">
     <p>Maureen Wairimu Ndungu | Data Analyst & Engineer</p>
     <p style="margin-top: 0.5rem;">
